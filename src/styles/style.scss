@@ -1,0 +1,57 @@
+$c1: #fff;
+$c2: #ff0066;
+$c3: #999;
+
+@mixin display {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Verdana', sans-serif;
+  margin: 0;
+  align-items: center;
+  background: white;
+  animation: colourChange 10s alternate infinite;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 2px solid $c3;
+  background: none;
+  color: $c1;
+  font-size: 16px;
+  font-family: 'Verdana', sans-serif;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid $c1;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+}
+
+.wrapper {
+  @include display;
+  height: 100vh;
+}
+
+.container {
+  @include display;
+  align-items: center;
+  color: $c1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 100px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+@keyframes colourChange {
+  0% {background: #33ccff;}
+  50% {background: #ff6699;}
+  100% {background: #ff9933;}
+}
