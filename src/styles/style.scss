@@ -17,18 +17,17 @@ body {
 
 button {
   padding: 5px 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid $c3;
   background: none;
   color: $c1;
   font-size: 16px;
   font-family: 'Verdana', sans-serif;
-}
-
-button:hover {
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid $c1;
-  cursor: pointer;
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid $c1;
+    cursor: pointer;
+  }
 }
 
 h1 {
