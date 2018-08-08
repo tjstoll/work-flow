@@ -3,14 +3,13 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 
 var sources = {
   "styles": "src/styles/*.+(css|scss)",
   "scripts": "src/scripts/*.js",
-  "images": "src/images/*.+(png|jpg|svg)",
-  "views": "src/views/*.+(html|pug)"
+  "images": "src/images/*.+(png|jpg|svg|JPG|PNG|SVG)",
+  "views": "src/views/*.html"
 };
 var dests = {
   "css": "dist/css",
@@ -29,7 +28,6 @@ gulp.task('css', function() {
 
 gulp.task('html', function() {
   gulp.src(sources.views)
-    .pipe(pug())
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
